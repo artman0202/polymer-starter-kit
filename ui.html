@@ -1,0 +1,8 @@
+{% extends 'polymer-starter-kit/base_polymer.html' %}
+{% load static %}
+{% block link %}
+    <link rel="import" href="{% static 'polymer-starter-kit/src/my-app.html' %}">
+{% endblock %}
+{% block app %}
+    <my-app csrf-token="{% csrf_token %}" project-list="{( project_list )}"></my-app >
+{% endblock %}
